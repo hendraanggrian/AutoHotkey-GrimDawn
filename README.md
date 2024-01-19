@@ -1,39 +1,35 @@
 # AutoHotkey Grim Dawn
 
-AutoHotkey scripts for automatically triggering Grim Dawn skills given
-intervals.
+![Autocasting Wind Devil and Mortar Trap.](https://github.com/hendraanggrian/AutoHotkey-GrimDawn/raw/assets/preview.gif)
+
+AutoHotkey scripts for casting, looting, and moving in Grim Dawn.
 
 ## Usage
 
 Configure 3 sections of `preferences.ini`.
 
-### Autocast
+### Cast
 
-The comma-separated values are hotbar key, interval in milliseconds, and whether
-to target center on cast. Only binds F1 and F2.
-
-```ini
-[Autocast]
-F1=1,6000,False
-F2=2,9000,True
-```
-
-### Dualcast
-
-Enter first and second hotbar keys, followed by whether to target center on
-cast. Only binds F3 and F4.
+Binds F1-F9 keys to autocast, multi-cast, or chained casting.
 
 ```ini
-[Dualcast]
-F3=3,4,True
+[Cast]
+F1=Auto,1,6000,False
+F2=Auto,2,9000,True
+F3=Multi,3,2,True
+F5=Chain,5-6-7,False
 ```
 
-### Tricast
+### Loot
 
-Enter first, second, and third hotbar keys, followed by whether to target center
-on cast. Only binds F5 and F6.
+Spam left click for limited time to pick up filtered items on the ground.
 
 ```ini
-[Tricast]
-F5=5,6,7,False
+[Loot]
+Duration=3000
 ```
+
+### Move
+
+Press F11 and aim cursor to move character without holding any key. This script
+has no configuration.

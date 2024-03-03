@@ -34,11 +34,11 @@ Hook := InputHook("V")
 ; populate global variables
 if (not IsError(Preference1)) {
     Line := StrSplit(Preference1, ",")
+    global Flag1 := false
     global Type1 := Line[1]
     global Hotbar1 := Line[2]
 
     if (Type1 = "Auto") {
-        global Flag1 := false
         global Interval1 := Line[3]
         global Centered1 := Line[4] = "true"
 
@@ -59,11 +59,11 @@ if (not IsError(Preference1)) {
 }
 if (not IsError(Preference2)) {
     Line := StrSplit(Preference2, ",")
+    global Flag2 := false
     global Type2 := Line[1]
     global Hotbar2 := Line[2]
 
     if (Type2 = "Auto") {
-        global Flag2 := false
         global Interval2 := Line[3]
         global Centered2 := Line[4] = "true"
 
@@ -84,11 +84,11 @@ if (not IsError(Preference2)) {
 }
 if (not IsError(Preference3)) {
     Line := StrSplit(Preference3, ",")
+    global Flag3 := false
     global Type3 := Line[1]
     global Hotbar3 := Line[2]
 
     if (Type3 = "Auto") {
-        global Flag3 := false
         global Interval3 := Line[3]
         global Centered3 := Line[4] = "true"
 
@@ -109,11 +109,11 @@ if (not IsError(Preference3)) {
 }
 if (not IsError(Preference4)) {
     Line := StrSplit(Preference4, ",")
+    global Flag4 := false
     global Type4 := Line[1]
     global Hotbar4 := Line[2]
 
     if (Type4 = "Auto") {
-        global Flag4 := false
         global Interval4 := Line[3]
         global Centered4 := Line[4] = "true"
 

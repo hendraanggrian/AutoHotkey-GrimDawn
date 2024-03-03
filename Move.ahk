@@ -1,13 +1,15 @@
-; Simple script to explore location until F11 or left click is pressed again.
+/*
+Simple script to explore location until F6 or left click is pressed again.
+*/
 
-#Include, libs/core.ahk
+#Include "lib/core.ahk"
 
-showTip("Move", "Toggle F11 to walk around.")
+ShowTip("Move", "Toggle F6 to walk around.")
 
-F11::
-    If (GetKeyState("LButton", "P")) {
-        Click, Up
-    } Else {
-        Click, Down
+F6::{
+    if (GetKeyState("LButton", "P")) {
+        Click "Up"
+    } else {
+        Click "Down"
     }
-    Return
+}

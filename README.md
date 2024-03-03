@@ -14,10 +14,10 @@ Binds F1-F9 keys to autocast, multi-cast, or chained casting.
 
 ```ini
 [Cast]
-F1=Auto,1,6000,False
-F2=Auto,2,9000,True
-F3=Multi,3,2,True
-F5=Chain,5-6-7,False
+F1=Auto,1,6000,false
+F2=Auto,2,9000,true
+F3=Multi,3,2,true
+F5=Chain,5-6-7,false
 ```
 
 ### Loot

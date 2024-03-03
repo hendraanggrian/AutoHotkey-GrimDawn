@@ -1,23 +1,25 @@
-; Use F10 to rapid-fire picking items for the given time duration.
+/*
+Use F5 to rapid-fire picking items for the given time Duration.
+*/
 
-#Include, libs/core.ahk
+#Include "lib/core.ahk"
 
-duration := getPreference("Loot", "Duration")
+Duration := GetPreference("Loot", "Duration")
 
-check(Not isError(duration), "Could not find duration preference.")
+Check(not IsError(Duration), "Could not find Duration preference.")
 
-secs := duration // 1000
-showTip("Loot", "Press F10 to pick up items for " . secs . " seconds.")
+Secs := Duration // 1000
+ShowTip("Loot", "Press F5 to pick up items for " . Secs . " seconds.")
 
-F10::
-    SetTimer, press, 100
-    SetTimer, stop, %duration%
-    Return
+F5::{
+    SetTimer Press, 100
+    SetTimer Stop, Duration
+}
 
-press() {
+Press() {
     Click
 }
 
-stop() {
-    SetTimer, press, Off
+Stop() {
+    SetTimer Press, 0
 }
